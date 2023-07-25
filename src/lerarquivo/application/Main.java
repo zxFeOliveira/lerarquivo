@@ -2,6 +2,7 @@ package lerarquivo.application;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
@@ -18,6 +19,9 @@ public class Main {
 		}
 		catch (FileNotFoundException e) {
 			System.out.println("Error openning file: " + e.getLocalizedMessage());
+		}
+		catch(IOException e) {
+			System.out.println("Error: " + e.getMessage());
 		}
 		finally {
 			if(sc != null) {
